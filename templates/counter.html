@@ -1,0 +1,13 @@
+<!-- This is my context from Django:
+    context = {
+        'name': request.POST['name'],
+        'message': request.POST['message'],
+        'count': len(request.POST['message'].split())
+    }
+ -->
+
+<div class="container">
+    <h3>{{ name }}</h3>
+    <p>"{{ message }}"</p>
+    <h4>{{ word_count }} words, and {{ character_count }} characters</h4>
+</div>

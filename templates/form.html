@@ -1,0 +1,7 @@
+<form action="{{ form_action }}" method="{{ form_method }}">{% csrf_token %}
+    <input type="text" name="{{ form_input_name }}" placeholder="{{ form_input_name_placeholder }}">
+    <br>
+    <textarea cols="21" rows="10" name="{{ form_input_message }}" placeholder="{{ form_input_message_placeholder }}"></textarea>
+    <br>
+    <input type="submit" value="{{ form_submit_button }}">
+</form>
