@@ -1,3 +1,3 @@
 release: python3 manage.py makemigrations
 release: python3 manage.py migrate
-web gunicorn project01.wsgi --log-file -
+python3 manage.py runserver
