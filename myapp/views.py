@@ -5,7 +5,7 @@ import datetime
 # Create your views here.
 
 
-def index(request):
+def index_old(request):
     context = {
         'name': 'Gonzalo',
         'background_image': 'https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80',
@@ -15,7 +15,10 @@ def index(request):
         'age': (lambda: int(((datetime.datetime.now() - datetime.datetime(1990, 11, 8)).days) / 365.25))(),
         'portfolio_url': 'https://github.com/m-gonzalo'
     }
-    return render(request, 'index.html', context)
+    return render(request, 'index-old.html', context)
+
+def index(request):
+    return render(request, 'index.html')
 
 def counter(request):
     context = {

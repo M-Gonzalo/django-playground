@@ -1,0 +1,51 @@
+<!-- Landing page. Greeting -->
+
+<!-- Load static files from django -->
+{% load static %}
+
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link href="{% static 'style.css' %}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="header" style="background-image: url('{{ random_background_image }}');">
+        <h1>Welcome to the home page</h1>
+    </div>
+    <div class="main">
+        <div class="left">
+            <h2>What is this?</h2>
+            <p>This is a web app that I built for practice.
+                It is a simple app that allows you to create a new user, add a new videogame, and view all of the
+                videogames from the rawg API, plus those that you have added.
+                It was built using Django, Python, and CSS.
+            </p>
+        </div>
+        <div class="right">
+            <h2>How do I use it?</h2>
+            <p>To create a new user, just click on the "New User" button at the top of the page.
+                Once you have created a user, you can add a new videogame by clicking on the "Add Videogame" button.
+                Once you have added a videogame, you can view all of the videogames that you have added by clicking on
+                the "View Videogames" button.
+            </p>
+        </div>
+        <div class="bottom">
+            <h2>Who am I?</h2>
+            <p>I am a full-stack developer from Argentina. I am {{ age }} years old, and I am currently studying Django
+                backend development, in addition to nodeJS.
+        </div>
+    </div>
+    <div class="footer">
+        <p>
+            <!-- Open in a new tab: -->
+            Created by: <a href="{{portfolio_url}}" target="_blank">Gonzalo M.</a>
+        </p>
+    </div>
+</body>
+
+</html>
